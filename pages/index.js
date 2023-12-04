@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import Image from "next/image";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { Model } from "@/components/Car_move";
+import { Line, Circle } from 'rc-progress';
 
 import {
   Environment,
@@ -43,7 +44,7 @@ const russo_one = Russo_One({
 function Loading(props) {
   const { active, progress, errors, item, loaded, total } = useProgress();
   useEffect(() => {
-    props.setLoaded(progress);
+    props.setLoaded(progress.toFixed(0));
     console.log(progress);
   });
   return (
@@ -567,23 +568,23 @@ export default function Home() {
         },
         duration: 1,
       })
-      tl.fromTo(lastRef.current,{
-        x: "-100vw",
-      },{
-        x: "0vw",
-        scrollTrigger: {
-          scroller: mainRef.current,
-          trigger: sixthRef.current,
-          start: "center 70%",
-          end:"center 50%",
-          scrub: 0.1,
-          // markers: true,
-          ease: "power1.inOut",
-          yoyo: true,
-          toggleActions: "play reverse on",
-        },
-        ease: "linear",
-      });
+    tl.fromTo(lastRef.current, {
+      x: "-100vw",
+    }, {
+      x: "0vw",
+      scrollTrigger: {
+        scroller: mainRef.current,
+        trigger: sixthRef.current,
+        start: "center 70%",
+        end: "center 50%",
+        scrub: 0.1,
+        // markers: true,
+        ease: "power1.inOut",
+        yoyo: true,
+        toggleActions: "play reverse on",
+      },
+      ease: "linear",
+    });
 
 
 
@@ -658,7 +659,7 @@ export default function Home() {
         <meta name="twitter:description" content="Explore the McLaren P1, the ultimate hybrid hypercar with cutting-edge technology and performance." />
         <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://mclearn-p1-3d-car-website.vercel.app/" />
-        
+
         <meta name="twitter:creator" content="@FahadAl40129449" />
 
 
@@ -744,7 +745,10 @@ export default function Home() {
       </div>
       {loaded != 100 && !isRotate ? (
         <div className="w-full h-screen bg-black flex justify-center items-center z-[999] absolute text-white">
-          {loaded}
+          <div className="flex w-3/12 flex-col justify-center items-center">
+          <Line percent={loaded} strokeWidth={1} strokeColor="blue" />          
+          <p>{loaded}%</p>
+          </div>
         </div>
       ) : (
         ""
