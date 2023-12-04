@@ -613,7 +613,7 @@ export default function Home() {
       tl.kill();
     };
     // }
-  }, [modRef, oneWheel, tesRef, twoWheel?.rotation]);
+  }, [loaded, modRef, oneWheel, tesRef, twoWheel?.rotation]);
 
   useEffect(() => {
     // console.log(cameraRef.current);
