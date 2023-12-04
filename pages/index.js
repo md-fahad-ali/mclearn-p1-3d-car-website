@@ -22,7 +22,7 @@ import gsap from "gsap";
 import { Sonsie_One, Russo_One } from "next/font/google";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { BsTornado } from "react-icons/bs";
-import { FaBolt } from "react-icons/fa6";
+import { FaBolt, FaLastfm } from "react-icons/fa6";
 import CountUp from "react-countup";
 import { MdCropRotate } from "react-icons/md";
 import styles from "@/styles/Home.module.css"
@@ -83,6 +83,7 @@ export default function Home() {
   const textRef3 = useRef(null);
   const textRef4 = useRef(null);
   const textRef5 = useRef(null);
+  const lastRef = useRef(null);
   const navRef = useRef(null);
 
   // const wheelRef = useRef();
@@ -548,8 +549,7 @@ export default function Home() {
             },
 
             ease: "linear",
-          });
-          tl.to(twoWheel?.rotation, {
+          }).to(twoWheel?.rotation, {
             x: "+=500",
             scrollTrigger: {
               scroller: mainRef.current,
@@ -567,6 +567,23 @@ export default function Home() {
         },
         duration: 1,
       })
+      tl.fromTo(lastRef.current,{
+        x: "-100vw",
+      },{
+        x: "0vw",
+        scrollTrigger: {
+          scroller: mainRef.current,
+          trigger: sixthRef.current,
+          start: "center 70%",
+          end:"center 50%",
+          scrub: 0.1,
+          // markers: true,
+          ease: "power1.inOut",
+          yoyo: true,
+          toggleActions: "play reverse on",
+        },
+        ease: "linear",
+      });
 
 
 
@@ -915,7 +932,7 @@ export default function Home() {
           style={{ background: "linear-gradient(2deg, rgb(20 24 33) 27.86%, rgba(46, 52, 64, 0) 74.43%)" }}
         >
           <div className="z-10 w-full h-screen whitespace-pre-wrap flex justify-center items-center text-white" style={{ textWrap: "balance" }}>
-            <h1 className={`${russo_one.className} text-5xl sm:text-9xl z-50 text-center`}>So, what could be your next ride?</h1>
+            <h1 className={`${russo_one.className} text-5xl sm:text-9xl z-50 text-center`} ref={lastRef}>So, what could be your next ride?</h1>
 
           </div>
         </section>
