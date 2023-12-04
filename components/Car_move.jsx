@@ -9,8 +9,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 
 export function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/asset/model.gltf");
-  const getData = useGLTF("/asset/model.gltf");
+  const { nodes, materials, animations } = useGLTF("/model.gltf");
+  const getData = useGLTF("/model.gltf");
   console.log(getData);
   const { actions } = useAnimations(animations, group);
   const wheel1 = useRef(null);
@@ -913,4 +913,4 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/asset/model.gltf");
+useGLTF.preload("/model.gltf");
