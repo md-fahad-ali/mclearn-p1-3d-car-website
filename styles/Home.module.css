@@ -1,0 +1,14 @@
+.rotate{
+    animation:spin_rotate;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 5rem;
+}
+@keyframes spin_rotate {
+    from{
+        transform: rotateZ(264deg);
+    }to{
+        transform: rotateZ(176deg);
+    }
+}
