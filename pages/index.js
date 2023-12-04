@@ -631,7 +631,7 @@ export default function Home() {
         {/* Open Graph (OG) Meta Tags */}
         <meta property="og:title" content="McLaren P1 - Ultimate Hybrid Hypercar" />
         <meta property="og:description" content="Explore the McLaren P1, the ultimate hybrid hypercar with cutting-edge technology and performance." />
-        <meta property="og:image" content="/asset/logo.png" />
+        <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://mclearn-p1-3d-car-website.vercel.app/" />
         <meta property="og:type" content="website" />
 
@@ -639,7 +639,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="McLaren P1 - Ultimate Hybrid Hypercar" />
         <meta name="twitter:description" content="Explore the McLaren P1, the ultimate hybrid hypercar with cutting-edge technology and performance." />
-        <meta property="og:image" content="/asset/logo.png" />
+        <meta property="og:image" content="/logo.png" />
         <meta property="og:url" content="https://mclearn-p1-3d-car-website.vercel.app/" />
         
         <meta name="twitter:creator" content="@FahadAl40129449" />
@@ -742,7 +742,7 @@ export default function Home() {
         className=" overflow-y-scroll overflow-x-hidden h-screen snap-mandatory snap-y "
       >
         <div className={`${russo_one.className} w-full absolute items-center p-5 justify-evenly text-white flex z-50 gap-5`} ref={navRef}>
-          <Image src="/asset/logo.png" width={200} height={100} alt="Logo" />
+          <Image src="/logo.png" width={200} height={100} alt="Logo" />
           <div className="flex gap-5">
             <Link href="" onClick={() => scrollPage(secRef)}>Home</Link>
             <h1>About</h1>
@@ -882,7 +882,7 @@ export default function Home() {
           <div className="w-full h-screen flex flex-col items-start justify-center p-20">
             <div className="flex w-full justify-center relative left-[10vw]">
               <div className="flex ">
-                <Image src="/asset/engine.png" width={200} height={200} alt={"Engine"} style={{ border: "5px solid #9ca3af" }} className="z-[1] border-spacing-3 border-4 border-black rounded-full relative -top-[5vw] left-[1vw]" ref={imgRef} />
+                <Image src="/engine.png" width={200} height={200} alt={"Engine"} style={{ border: "5px solid #9ca3af" }} className="z-[1] border-spacing-3 border-4 border-black rounded-full relative -top-[5vw] left-[1vw]" ref={imgRef} />
                 <svg
                   ref={svgRef}
                   className="relative top-[2px] -left-[44px] md:left-[1px] md:-top-[46px]"
