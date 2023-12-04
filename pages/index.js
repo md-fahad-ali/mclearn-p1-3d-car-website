@@ -695,7 +695,7 @@ export default function Home() {
                 shadow-mapSize-height={1024} // Adjust the shadow map size as needed
               />
 
-              <Environment files="/asset/gem_2.hdr" />
+              <Environment files="/gem_2.hdr" />
 
               <Model
                 setOneWheel={setOneWheel}
