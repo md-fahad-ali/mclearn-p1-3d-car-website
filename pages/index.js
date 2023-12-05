@@ -852,13 +852,13 @@ export default function Home() {
         >
           <div className="flex w-full h-screenx items-center justify-between">
             <div className="flex flex-col content-center -rotate-90" ref={textRef1}>
-              <h1 className={`${russo_one.className} relative z-50 text-white text-[3vw] md:text-8xl`}>Pure</h1>
-              <h1 className={`${russo_one.className} relative z-50 text-white text-[3vw] md:text-8xl`}>Rare</h1>
-              <h1 className={`${russo_one.className} relative z-50 text-white text-[3vw] md:text-8xl`}>Beautiful</h1>
+              <h1 className={`${russo_one.className} relative z-50 text-white text-[5vw]`}>Pure</h1>
+              <h1 className={`${russo_one.className} relative z-50 text-white text-[5vw]`}>Rare</h1>
+              <h1 className={`${russo_one.className} relative z-50 text-white text-[5vw]`}>Beautiful</h1>
             </div>
             <div className="flex flex-col content-center -rotate-90" ref={textRef2}>
-              <h1 className={`${russo_one.className} relative z-50 text-white text-[3vw] md:text-6xl`}>Body type</h1>
-              <h1 className={`${russo_one.className} relative z-50 text-gray-500 text-[3vw] md:text-6xl `}>Coupé</h1>
+              <h1 className={`${russo_one.className} relative z-50 text-white text-[5vw] `}>Body type</h1>
+              <h1 className={`${russo_one.className} relative z-50 text-gray-500 text-[5vw]  `}>Coupé</h1>
             </div>
           </div>
         </section>
