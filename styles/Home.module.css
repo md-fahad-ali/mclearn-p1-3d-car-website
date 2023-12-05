@@ -1,14 +1,39 @@
-.rotate{
-    animation:spin_rotate;
-    animation-duration:2s;
+.rotate {
+    animation: spin_rotate;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     font-size: 5rem;
 }
+
 @keyframes spin_rotate {
-    from{
+    from {
         transform: rotateZ(264deg);
-    }to{
+    }
+
+    to {
         transform: rotateZ(176deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .trigger {
+        transform: scale(0.3);
+    }
+}
+
+@media only screen and (max-width: 853px) {
+    .trigger {
+        transform: scale(0.5);
+        position: relative;
+        left: -10%;
+    }
+
+    .trigger>img {
+        left: 10%;
+    }
+
+    .trigger>svg {
+        top: 10%;
     }
 }

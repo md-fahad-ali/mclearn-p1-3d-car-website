@@ -762,7 +762,7 @@ export default function Home() {
 
         className=" overflow-y-scroll overflow-x-hidden h-screen snap-mandatory snap-y "
       >
-        <div className={`${russo_one.className} w-full absolute items-center p-5 justify-evenly text-white flex z-50 gap-5`} ref={navRef}>
+        <div className={`${russo_one.className} p-[0px] w-full absolute items-center justify-evenly text-white flex z-50 gap-5`} ref={navRef}>
           <Image src="/logo.png" width={200} height={100} alt="Logo" />
           <div className="flex gap-5">
             <Link href="" onClick={() => scrollPage(secRef)}>Home</Link>
@@ -805,39 +805,39 @@ export default function Home() {
           <div className="flex w-full h-screen justify-evenly items-end relative bottom-[7%] flex-row flex-nowrap">
             <div className="flex flex-col items-center">
               <h1
-                className={` ${russo_one.className} text-slate-600 flex text-2xl sm:text-4xl items-center gap-1 sm:gap-3`}
+                className={` ${russo_one.className} text-slate-600 flex text-[4vmax] sm:text-3xl items-center gap-1 sm:gap-3`}
               >
                 <IoSpeedometerOutline className="text-2xl sm:text-4xl text-slate-600" />
                 Speed
               </h1>
               <h1
-                className={`${russo_one.className} text-white text-xl sm:text-4xl`}
+                className={`${russo_one.className} text-white text-base sm:text-3xl`}
               >
                 {loaded && <p><CountUp start={0} redraw={true} end={350} duration={5} /> Kph</p>}
               </h1>
             </div>
             <div className="flex flex-col items-center">
               <h1
-                className={` ${russo_one.className} text-slate-600 flex text-2xl sm:text-4xl items-center gap-1 sm:gap-3`}
+                className={` ${russo_one.className} text-slate-600 flex  text-[4vmax] sm:text-3xl items-center gap-1 sm:gap-3`}
               >
                 <BsTornado className="text-2xl sm:text-4xl text-slate-600" />
                 Torque
               </h1>
               <h1
-                className={`${russo_one.className} text-white text-xl sm:text-4xl`}
+                className={`${russo_one.className} text-white text-base sm:text-3xl`}
               >
                 {loaded && <p><CountUp start={0} redraw={true} end={900} duration={5} /> Kph</p>}
               </h1>
             </div>
             <div className="flex flex-col items-center">
               <h1
-                className={` ${russo_one.className} text-slate-600 flex text-2xl sm:text-4xl items-center gap-1 sm:gap-3`}
+                className={` ${russo_one.className} text-slate-600 flex text-[4vmax] sm:text-4xl items-center gap-1 sm:gap-3`}
               >
                 <FaBolt className="text-2xl sm:text-4xl text-slate-600" />
                 Power
               </h1>
               <h1
-                className={`${russo_one.className} text-white text-xl sm:text-4xl`}
+                className={`${russo_one.className} text-white text-base sm:text-3xl`}
               >
                 {loaded && <p><CountUp end={350} redraw={true} duration={5} /> Kph</p>}
               </h1>
@@ -866,10 +866,10 @@ export default function Home() {
           ref={thirdRef}
           className="w-full h-screen snap-center flex justify-center items-center"
         >
-          <div className="w-full h-screen flex items-center justify-between p-20" ref={textRef3}>
+          <div className="w-full h-screen flex items-center justify-between p-10 sm:p-20" ref={textRef3}>
             <div className="">
               <h1 className={`${russo_one.className} text-white text-3xl md:text-7xl font-extrabold`}>Premium Exprience</h1>
-              <p className="text-white font-sans text-base md:text-2xl">This car had a bonded aluminium and carbon carbon fiber monocoque.</p>
+              <p className="text-white font-sans text-base md:w-[60%] md:text-2xl">This car had a bonded aluminium and carbon carbon fiber monocoque.</p>
               <br />
               <div className="flex flex-col">
                 <div>
@@ -889,9 +889,9 @@ export default function Home() {
           ref={forthRef}
           className="w-full h-screen snap-center flex justify-center items-center"
         >
-          <div className="w-full h-screen flex flex-col items-center justify-center p-20" ref={textRef4}>
+          <div className="w-full h-screen flex flex-col items-center justify-center p-10 sm:p-20" ref={textRef4}>
             <div className="flex flex-col relative left-1/2">
-              <h1 className={`${russo_one.className} text-white text-3xl md:text-7xl font-extrabold`}>Easy to ride</h1>
+              <h1 className={`${russo_one.className} text-white text-xl md:text-6xl font-extrabold`}>Easy to ride</h1>
               <p className=" text-slate-400 font-sans text-base md:text-2xl whitespace-pre-wrap break-all w-1/2">This car weight is only 1,395kg (3,075lb).So easy to ride with this car.We believe that the purest creation are those where the design, the driving experience, the passenger experience and engineering, all play an equal role.</p>
             </div>
           </div>
@@ -900,10 +900,10 @@ export default function Home() {
           ref={fifthRef}
           className="w-full h-screen snap-center "
         >
-          <div className="w-full h-screen flex flex-col items-start justify-center p-20">
+          <div className="w-full h-screen flex flex-col items-start justify-center p-10 sm:p-20">
             <div className="flex w-full justify-center relative left-[10vw]">
-              <div className="flex ">
-                <Image src="/engine.png" width={200} height={200} alt={"Engine"} style={{ border: "5px solid #9ca3af" }} className="z-[1] border-spacing-3 border-4 border-black rounded-full relative -top-[5vw] left-[1vw]" ref={imgRef} />
+              <div className={`${styles.trigger} flex `}>
+                <Image src="/engine.png" width={200} height={200} alt={"Engine"} style={{ border: "5px solid #9ca3af" }} className={`z-[1] border-spacing-3 border-4 border-black rounded-full relative -top-[5vw] left-[1vw]`} ref={imgRef} />
                 <svg
                   ref={svgRef}
                   className="relative top-[2px] -left-[44px] md:left-[1px] md:-top-[46px]"
@@ -936,7 +936,7 @@ export default function Home() {
           style={{ background: "linear-gradient(2deg, rgb(20 24 33) 27.86%, rgba(46, 52, 64, 0) 74.43%)" }}
         >
           <div className="z-10 w-full h-screen whitespace-pre-wrap flex justify-center items-center text-white" style={{ textWrap: "balance" }}>
-            <h1 className={`${russo_one.className} text-5xl sm:text-9xl z-50 text-center`} ref={lastRef}>So, what could be your next ride?</h1>
+            <h1 className={`${russo_one.className} text-[5vmax] z-50 text-center`} ref={lastRef}>So, what could be your next ride?</h1>
 
           </div>
         </section>
